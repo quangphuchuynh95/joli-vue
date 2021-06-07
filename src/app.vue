@@ -2,7 +2,7 @@
   <div>
     <div>
       Header
-      <router-link to="/">
+      <router-link to="">
         Home
       </router-link>
       <router-link to="/about">
