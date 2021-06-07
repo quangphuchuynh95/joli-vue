@@ -2,7 +2,7 @@
 
 This template should help get you started developing with Vue 3 and preinstall and config packages
 
-## preinstall packages
+## Preinstall packages
 
 1. Vite
 1. Typescript
@@ -12,6 +12,27 @@ This template should help get you started developing with Vue 3 and preinstall a
 1. Vue i18n 
 1. Axios
 1. Tailwind css
+1. Eslint
+
+## Setup
+
+### 1. Clone repository
+```shell
+git clone git@github.com:quangphuchuynh95/vue-3-skeleton.git my-project
+```
+Hoặc
+```shell
+git archive --format=tar --remote=ssh://git@github.com:quangphuchuynh95/vue-3-skeleton.git master | tar -xf -
+```
+
+### 2. Install dependencies
+```shell
+yarn
+```
+Hoặc
+```shell
+npm i
+```
 
 ## Recommended IDE Setup
 
