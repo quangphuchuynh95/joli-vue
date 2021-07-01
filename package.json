@@ -1,7 +1,8 @@
 {
   "name": "joli-vue",
   "license": "MIT",
-  "version": "0.0.3",
+  "keywords": ["vue", "component"],
+  "version": "0.0.4",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
