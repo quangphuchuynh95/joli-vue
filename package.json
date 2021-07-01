@@ -1,14 +1,19 @@
 {
   "name": "joli-vue",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "lint": "eslint src --ext .vue,.ts"
+    "lint": "eslint src --ext .vue,.ts",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
   "exports": {
@@ -38,6 +43,7 @@
     "tailwindcss": "^2.1.4",
     "typescript": "^4.1.3",
     "vite": "^2.3.4",
+    "vitepress": "^0.15.5",
     "vue-eslint-parser": "^7.6.0",
     "vue-tsc": "^0.0.24"
   }
