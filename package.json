@@ -2,7 +2,7 @@
   "name": "joli-vue",
   "license": "MIT",
   "keywords": ["vue", "component", "lightweight"],
-  "version": "0.0.5",
+  "version": "0.0.9",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -13,7 +13,7 @@
     "docs:serve": "vitepress serve docs"
   },
   "files": [
-    "dist"
+    "dist", "libs"
   ],
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
@@ -21,7 +21,8 @@
     ".": {
       "import": "./dist/my-lib.es.js",
       "require": "./dist/my-lib.umd.js"
-    }
+    },
+    "./libs/": "./libs/"
   },
   "dependencies": {
     "sass": "^1.34.1",

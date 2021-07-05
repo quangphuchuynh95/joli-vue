@@ -1,7 +1,18 @@
 <template>
   <div class="w-1/2">
-    <j-count-down value="2021-07-2 00:00:00" />
-    <j-sparkline :data="[1,1,3,1]" />
+    <j-button>đâs</j-button>
+    <j-dialog v-model:open="dialog">
+      <template #activator="{ on }">
+        <j-button v-on="on">đâs</j-button>
+      </template>
+      <template #default>
+        <j-card
+          outlined
+        >
+          dasdasdas
+        </j-card>
+      </template>
+    </j-dialog>
   </div>
 </template>
 
@@ -9,13 +20,16 @@
 import { defineComponent } from 'vue'
 import JCountDown from '../libs/components/j-count-down.vue';
 import JSparkline from '../libs/components/j-sparkline.vue';
+import JDialog from '../libs/components/j-dialog.vue';
+import JCard from '../libs/components/j-card.vue';
+import JButton from '../libs/components/j-button.vue';
 
 export default defineComponent({
   name: 'App',
-  components: {JSparkline, JCountDown },
+  components: {JButton, JCard, JDialog, JSparkline, JCountDown },
   data() {
     return {
-      a: 102
+      dialog: false
     }
   },
   methods: {
