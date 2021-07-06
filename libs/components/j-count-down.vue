@@ -58,7 +58,7 @@ export default defineComponent({
     })
     const remainTime = computed<CountDownFormatterProps>(() => {
       const epoch = Math.round((dateValue.value.getTime() - now.value.getTime()) / 1000);
-      let remainEpoch = epoch;
+      let remainEpoch = Math.abs(epoch);
       const day = Math.floor(remainEpoch / 3600 / 24);
       remainEpoch -= day * 3600 * 24;
       const hour = Math.floor(remainEpoch / 3600);

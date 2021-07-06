@@ -1,18 +1,6 @@
 <template>
   <div class="w-1/2">
     <j-button>đâs</j-button>
-    <j-dialog v-model:open="dialog">
-      <template #activator="{ on }">
-        <j-button v-on="on">đâs</j-button>
-      </template>
-      <template #default>
-        <j-card
-          outlined
-        >
-          dasdasdas
-        </j-card>
-      </template>
-    </j-dialog>
   </div>
 </template>
 
