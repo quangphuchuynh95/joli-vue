@@ -1,30 +1,29 @@
 <template>
   <div class="w-1/2">
-    <j-button>đâs</j-button>
+    <j-range-slider
+      v-model:from="from"
+      v-model:to="to"
+      max="100"
+      min="10"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import JCountDown from '../libs/components/j-count-down.vue';
-import JSparkline from '../libs/components/j-sparkline.vue';
 import JDialog from '../libs/components/j-dialog.vue';
 import JCard from '../libs/components/j-card.vue';
-import JButton from '../libs/components/j-button.vue';
+import JRangeSlider from '../libs/components/j-range-slider.vue';
 
 export default defineComponent({
   name: 'App',
-  components: {JButton, JCard, JDialog, JSparkline, JCountDown },
+  components: {JRangeSlider, JCard, JDialog },
   data() {
     return {
-      dialog: false
+      from: 50,
+      to: 100,
     }
   },
-  methods: {
-    s(e) {
-      console.log(e);
-    }
-  }
 })
 </script>
 
