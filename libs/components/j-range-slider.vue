@@ -22,7 +22,6 @@
       />
     </div>
   </div>
-  {{from}} - {{to}}
 </template>
 
 <script lang="ts">
@@ -50,8 +49,7 @@ export default defineComponent({
   },
   emits: ['update:from', 'update:to'],
   setup(props, context) {
-    const track = ref<HTMLElement>()
-    console.log(track);
+    const track = ref<HTMLElement>();
     const trackWidth = computed(() => {
       return track.value?.getBoundingClientRect()?.width || 1
     })
@@ -70,7 +68,6 @@ export default defineComponent({
     const startMoveFrom = (originE: MouseEvent) => {
       const originValue = Number(props.from);
       const moveHandler = (e: MouseEvent) => {
-        console.log(e.clientX - originE.clientX);
         const move = (e.clientX - originE.clientX) / pixelRate.value;
         let newValue = Math.round(originValue + move)
         if (newValue < Number(props.min)) {
@@ -93,7 +90,6 @@ export default defineComponent({
     const startMoveTo = (originE: MouseEvent) => {
       const originValue = Number(props.to);
       const moveHandler = (e: MouseEvent) => {
-        console.log(e.clientX - originE.clientX);
         const move = (e.clientX - originE.clientX) / pixelRate.value;
         let newValue = Math.round(originValue + move)
         if (newValue < Number(props.from)) {
